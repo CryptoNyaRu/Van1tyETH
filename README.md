@@ -14,7 +14,7 @@
          -e (--eoa)                                  Search for EOA addresses
          -c (--create)                               Search for contract addresses generated with CREATE(nonce=0)
         -c2 (--create2) <factory> <bytecode_path>    Search for contract addresses for CREATE2
-        -cc (--contractcharm)                        Search for contract addresses for ContractCharm
+        -cc (--contractcharm) <address>              Search for contract addresses for ContractCharm
 ```
 
 ## 注意事项
