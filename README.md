@@ -1,3 +1,8 @@
+## 设备要求
+
+- Van1tyETH 仅支持  CUDA 计算能力  >= 5.2 的 GPU(≈ GTX 950): [CUDA 计算能力列表](https://developer.nvidia.com/cuda-gpus)
+- 如果你的设备不支持 CUDA 或 CUDA 计算能力不足, 那么建议你使用 1inch 的 [profanity2](https://github.com/1inch/profanity2) 以及 [ERADICATE2](https://github.com/johguse/ERADICATE2)
+
 ## 使用方法
 
 ```
@@ -14,7 +19,7 @@
          -e (--eoa)                                  Search for EOA addresses
          -c (--create)                               Search for contract addresses generated with CREATE(nonce=0)
         -c2 (--create2) <factory> <bytecode_path>    Search for contract addresses for CREATE2
-        -cc (--contractcharm) <address>              Search for contract addresses for ContractCharm
+        -cc (--c0ntractcharm) <address>              Search for contract addresses for C0ntractCharm
 ```
 
 ## 注意事项

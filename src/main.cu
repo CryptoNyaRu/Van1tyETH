@@ -453,7 +453,7 @@ int main(int argc, char *argv[]) {
     int mode = -1; // 0 = EOA, 1 = CREATE, 2 = CREATE2
     char* input_create2_factory = 0;
     char* input_bytecode_path = 0;
-    bool usingContractCharm = false;
+    bool usingC0ntractcharm = false;
 
     for (int i = 1; i < argc;) {
         if (strcmp(argv[i], "--device") == 0 || strcmp(argv[i], "-d") == 0) {
@@ -491,18 +491,18 @@ int main(int argc, char *argv[]) {
                 return 1;
             }
             i += 3;
-        } else if (strcmp(argv[i], "--contractcharm") == 0 || strcmp(argv[i], "-cc") == 0) {
+        } else if (strcmp(argv[i], "--c0ntractcharm") == 0 || strcmp(argv[i], "-cc") == 0) {
             mode = 2;
             input_create2_factory = argv[i + 1];
             if (!input_create2_factory) {
-                printf("You must specify the ContractCharm address when using -cc(\"-cc <address>\")\n");
+                printf("You must specify the C0ntractcharm address when using -cc(\"-cc <address>\")\n");
                 return 1;
             }
             if (strlen(input_create2_factory) != 40 && strlen(input_create2_factory) != 42) {
-                printf("The ContractCharm address must be 40 characters long\n");
+                printf("The C0ntractcharm address must be 40 characters long\n");
                 return 1;
             }
-            usingContractCharm = true;
+            usingC0ntractcharm = true;
             i += 2;
         } else {
             i++;
@@ -527,7 +527,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (mode == -1) {
-        printf("No mode is specified(\"-e\" for EOA, \"-c\" for CREATE Contract, \"-c2\" for CREATE2 Contract)\", \"-cc <address>\" for ContractCharm)\n");
+        printf("No mode is specified(\"-e\" for EOA, \"-c\" for CREATE Contract, \"-c2\" for CREATE2 Contract)\", \"-cc <address>\" for C0ntractcharm)\n");
         return 1;
     }
     if (mode != 0 && mode != 1 && mode != 2) {
@@ -538,7 +538,7 @@ int main(int argc, char *argv[]) {
     #define nothex(n) ((n < 48 || n > 57) && (n < 65 || n > 70) && (n < 97 || n > 102))
     _uint256 bytecode_hash;
     if (mode == 2) {
-        if (usingContractCharm) {
+        if (usingC0ntractcharm) {
             //0x6000600060006000335afa3d600060003e3d6000f3 21 bytes
             uint8_t* bytecode = new uint8_t[21];
             if (bytecode == 0) {
